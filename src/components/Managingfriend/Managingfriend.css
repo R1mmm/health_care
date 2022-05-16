@@ -1,0 +1,134 @@
+.searchBox{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 337px;
+    height: 42px;
+    left: 471px;
+    top: 114px;
+
+    border: 1.7px solid #FF855E;
+    border-radius: 10px;
+    padding: 15px 10px 16.5px 10px;
+    }
+
+.searchLogo{
+    position: absolute;
+    width: 21.43px;
+    height: 19.88px;
+    left: 769.95px;
+    top: 123px;
+
+    }
+
+.boxdiv{
+    position: absolute;
+    width: 385.28px;
+    height: 500px;
+    left: 471px;
+    top: 175px;
+
+    overflow: auto;
+}
+
+
+.boxdiv::-webkit-scrollbar {
+    width: 20px;
+}
+
+.boxdiv::-webkit-scrollbar-thumb {
+    background-color: #ededed;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    height: 30%;
+}
+
+.boxdiv::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+.friendBox{
+    position: relative;
+    width: 337.22px;
+    height: 110px;
+    left: 0px;
+    top: 0px;
+
+    background: #FF855E;
+    border-radius: 10px;
+    margin-top: 0px;
+
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+.MfriendName{
+    position: relative;
+    width: 103.56px;
+    height: 19.85px;
+    left: 20px;
+    top: 0px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    
+}
+
+.MgroupName{
+    position: relative;
+    width: 124.28px;
+    height: 20.26px;
+    left: 20px;
+    top: -10px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+}
+
+.Mmemo{
+    position: relative;
+    width: 124.28px;
+    height: 20.26px;
+    left: 20px;
+    top: -15px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FFFFFF;
+    
+}
+
+.Mrate{
+    position: relative;
+width: 124.28px;
+height: 20.26px;
+left: 20px;
+top: 10px;
+
+font-family: 'SUIT Variable';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+
+color: #FFFFFF;
+
+}

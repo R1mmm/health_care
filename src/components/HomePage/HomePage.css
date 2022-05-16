@@ -1,0 +1,176 @@
+@import '~antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&family=Stylish&family=Sunflower:wght@300&display=swap");
+
+
+*{margin:0; padding:0}
+
+.homebody{
+    background-color: #FF8762;
+    font-family: 'Noto Sans KR';
+    height: 100vh;
+
+}
+.logout{
+    position: absolute;
+    width: 49px;
+    height: 18px;
+    left: 1083px;
+    top: 24px;
+}
+.Homelogo{
+    position: absolute;
+    width: 205px;
+    height: 23px;
+    left: 150px;
+    top: 27px;
+
+}
+
+
+
+.font{
+    position: absolute;
+    width: 112px;
+    height: 77px;
+    left: 585px;
+    top: 180px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 75px;
+    line-height: 70px;
+   
+
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+.block1{
+    position:relative;
+    width: 117.32px;
+    height: 116.42px;
+    left: 511.8px;
+    top: 276px;
+    cursor:pointer;
+}
+.block1 .exercise{
+    display: block;
+    position: relative;
+    width: 120%;
+    height: 120%;
+    margin: 0px auto;
+
+}
+
+.block1 .exercise_text{
+    display: block;
+    opacity:0;
+    transition:opacity .3s ease;
+    width:100%;
+    height:100%;
+    left: 5.5%;
+    top: 6.5%;
+    position:absolute;
+}
+
+.block1:hover .exercise_text{transition:opacity .3s ease; opacity:1}
+
+.block2{
+    position:relative;
+    width: 117.32px;
+    height: 116.42px;
+    left: 670px;
+    top: 160px;
+    cursor:pointer;
+}
+.block2 .calendar{
+    display: block;
+    position: relative;
+    width: 120%;
+    height: 120%;
+    left: 0%;
+    top: 0%;
+    margin: 0px auto;
+
+}
+
+.block2 .calendar_text{
+    display: block;
+    opacity:0;
+    transition:opacity .3s ease;
+    width:100%;
+    height:100%;
+    left: 6%;
+    top: 6%;
+    position:absolute;
+}
+
+.block2:hover .calendar_text{transition:opacity .3s ease; opacity:1}
+
+.block3{
+    position:absolute;
+    width: 117.32px;
+    height: 116.42px;
+    left: 511.8px;
+    top: 414.82px;
+    cursor:pointer;
+}
+.block3 .list{
+    display: block;
+    position: relative;
+    width: 120%;
+    height: 120%;
+    left: 0%;
+    top: 0%;
+    margin: 0px auto;
+
+}
+
+.block3 .list_text{
+    display: block;
+    opacity:0;
+    transition:opacity .3s ease;
+    width:108%;
+    height:108%;
+    left: 2%;
+    top: 6%;
+    position:absolute;
+}
+
+.block3:hover .list_text{transition:opacity .3s ease; opacity:1}
+
+.block4{
+    position:absolute;
+    width: 117.32px;
+    height: 116.42px;
+    left: 651.68px;
+    top: 414.82px;
+    cursor:pointer;
+}
+.block4 .myPage{
+    display: block;
+    position: relative;
+    width: 120%;
+    height: 120%;
+    left: 15%;
+    top: 0%;
+    margin: 0px auto;
+
+}
+
+.block4 .myPage_text{
+    display: block;
+    opacity:0;
+    transition:opacity .3s ease;
+    width:100%;
+    height:100%;
+    left: 21.3%;
+    top: 6.2%;
+    position:absolute;
+}
+
+.block4:hover .myPage_text{transition:opacity .3s ease; opacity:1}
+
+
+

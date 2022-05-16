@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&family=Stylish&family=Sunflower:wght@300&display=swap");
+
+
+.Recbody {
+    background-color: #ffffff;
+    font-family: 'Noto Sans KR';
+    width: 1280px;
+    height: 720px;
+
+}
+
+.RecLogo {
+
+    position: absolute;
+    width: 205px;
+    height: 23px;
+    left: 200px;
+    top: 24px;
+}
+
+.RecHome {
+    position: absolute;
+    width: 39px;
+    height: 18px;
+    left: 1041px;
+    top: 24px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #FF855E;
+}
+
+.RecGname {
+    position: absolute;
+    width: 96px;
+    height: 29px;
+    left: 201px;
+    top: 130px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF7246;
+}
+
+.RecDate {
+    position: absolute;
+    width: 678px;
+    height: 35px;
+    left: 200px;
+    top: 167px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #FF7246;
+
+}
+
+.recKal {
+    position: absolute;
+    width: 185px;
+    height: 45px;
+    left: 200px;
+    top: 227px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF7246;
+}
+
+.RecCalVal {
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    left: 254px;
+    top: 220px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:1.5px solid;
+    border-color: #cdcdcd;
+
+    outline: none;
+    color: #817E7E;
+}
+
+.RecTime {
+    position: absolute;
+    width: 185px;
+    height: 45px;
+    left: 356px;
+    top: 227px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF7246;
+
+}
+
+.RecTimeVal {
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    left: 429px;
+    top: 220px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:1.5px solid;
+    border-color: #cdcdcd;
+
+    outline: none;
+    color: #817E7E;
+
+}
+
+.RecRep {
+    position: absolute;
+    width: 185px;
+    height: 45px;
+    left: 553px;
+    top: 227px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF7246;
+
+}
+
+.RecRepVal {
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    left: 626px;
+    top: 220px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:1.5px solid;
+    border-color: #cdcdcd;
+
+    outline: none;
+
+    color: #817E7E;
+
+}
+
+.RecPic {
+    position: absolute;
+    width: 90px;
+    height: 29px;
+    left: 200px;
+    top: 305px;
+
+    border: 1px solid #FF7246;
+    box-sizing: border-box;
+    border-radius: 30px;
+    cursor:pointer;
+    outline: none;
+    overflow: hidden;
+}
+
+.picFile label {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 200px;
+    top: 300px;
+    display: inline-block;
+
+    cursor: pointer;
+    border: 1.5px solid #FF7246;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color:#FF7246;
+    text-align: center;
+}
+
+.picFile input[type="file"] {
+    /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    padding: 10;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.RecTag {
+    position: absolute;
+    width: 421px;
+    height: 39px;
+    left: 203px;
+    top: 352px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #A2A2A2;
+
+}
+
+.RecText {
+    position: absolute;
+    width: 879px;
+    height: 298px;
+    left: 201px;
+    top: 377px;
+
+    background: #F3F3F3;
+    border-radius: 5px;
+    margin-top: 10px ;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 10px 10px 10px 10px;
+}
+
+.RecText::-webkit-scrollbar {
+    width: 20px;
+    cursor: default;
+}
+
+.RecText::-webkit-scrollbar-thumb {
+    background-color: #FA9475;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    height: 30%;
+    cursor: default;
+}
+
+.RecText::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+    cursor: default;
+}
+
+.saveButton{
+    position: absolute;
+    width: 82px;
+    height: 34px;
+    left: 999px;
+    top: 173px;
+    
+    background: #FF7246;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color:#ffffff;
+    cursor:pointer;
+}

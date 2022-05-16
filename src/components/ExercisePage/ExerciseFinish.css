@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&family=Stylish&family=Sunflower:wght@300&display=swap");
+
+.body{
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #FF8762;
+}
+
+.logout{
+    position: absolute;
+    width: 49px;
+    height: 18px;
+    left: 1083px;
+    top: 24px;
+    opacity: 0.7;
+    filter: alpha(opacity=40);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #FFFFFF;
+}
+.esclogo{
+    position: absolute;
+    width: 205px;
+    height: 23px;
+    left: 150px;
+    top: 27px;
+    opacity: 0.7;
+    filter: alpha(opacity=40);
+
+}
+
+.box{
+    position: absolute;
+    width: 550px;
+    height: 330px;
+    left: 355px;
+    top: 160px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.check{
+    position: relative;
+    width: 55.71px;
+    height: 30.01px;
+    left: 250px;
+    top: 100px;
+}
+
+.comment1{
+    position: relative;
+    width: 385px;
+    height: 51px;
+    left: 80px;
+    top: 130px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FF7246;
+}
+
+.comment2{
+    position: relative;
+    width: 281px;
+    height: 22px;
+    left: 130px;
+    top: 95px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: #FF7246;
+}
+
+.toHome{
+    position: relative;
+    width: 100.82px;
+    height: 33.48px;
+    left: 220px;
+    top: 120px;
+    
+    background: #FF7246;
+    border-radius: 30px;
+}
