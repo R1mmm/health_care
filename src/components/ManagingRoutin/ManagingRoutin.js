@@ -103,7 +103,10 @@ function ManagingRoutin() {
 
         <input type='button' onClick={openModal} value='새로 만들기' className='createNew'></input>
 
-        <CreateGroupModal show={modalOpen} onHide={closeModal}/>
+        
+        {modalOpen ? (
+          <CreateGroupModal show={modalOpen} onHide={closeModal}/>
+        ):null}
         <div className='routindiv'>
           {routinList.map((routin)=>(<RoutinBox routinList={routin}/>))}
         </div>

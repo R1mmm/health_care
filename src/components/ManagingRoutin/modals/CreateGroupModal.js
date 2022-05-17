@@ -14,13 +14,28 @@ function CreateGroupModal ({show,onHide}){
     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
-          <header>
-            {header}
-            <button className="close" onClick={onHide}>
+          <button className="close" onClick={onHide}>
               &times;
             </button>
-          </header>
-          <main>{header}</main>
+          <main>
+            <p className='makeRoutin'>루틴 만들기 </p>
+
+            <p className='text'>루틴명</p>
+            <input type="text" className='routinName'></input>
+
+            
+            <p className='text'>운동 영상 제목</p>
+
+            <p className='text'>영상 링크</p>
+            <p className='text'>목표 운동 요일</p>
+
+            <p className='text'>세트 반복 횟수</p>
+            <p className='text'>루틴설명</p>
+
+            <textarea className='RecText2' placeholder='텍스트를 입력하세요' ></textarea>
+
+            
+          </main>
           <footer>
             <button className="close" onClick={onHide}>
               close
