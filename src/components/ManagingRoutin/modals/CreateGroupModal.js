@@ -1,12 +1,81 @@
-import React from 'react'
-import {Modal,Button} from 'react-bootstrap'
+import React ,{useState}from 'react'
 import './modal.css';
+
+
+const GoalDayOptions=[
+  {value:0,label:"주 1회"},
+  {value:1,label:"주 2회"},
+  {value:2,label:"주 3회"},
+  {value:3,label:"주 4회"},
+  {value:4,label:"주 5회"},
+  {value:5,label:"주 6회"},
+  {value:6,label:"주 7회"},
+]
 
 function CreateGroupModal ({show,onHide}){
 
+  //현재 로그인된 유저 정보 / 그룹명+영상제목+태그도 함께보내줘야함
+  const[RoutinName,setRoutinName]=useState("");
+  const[VideoName,setVideoName]=useState("");
+  const[VideoLink,setVideoLink]=useState("");
+  const[RoutinContent,setRoutinContent]=useState("");
+  const[GoalDay,setGoalDay]=useState(0); //주 1회면 0, 주2회면 1 ...
+
+  const onRoutinNameChange = (e) => {
+    setRoutinName(e.currentTarget.value);
+  };
+
+  const onVideoNameChange = (e) => {
+    setVideoName(e.currentTarget.value);
+  };
+
+  const onVideoLinkChange = (e) => {
+    setVideoLink(e.currentTarget.value);
+  };
+
+  const onRoutinContentChange = (e) => {
+    setRoutinContent(e.currentTarget.value);
+  };
+
+  const onGoalDayChange= (e) => {
+    setGoalDay(e.currentTarget.value);
+  };
+
+
+  const onSubmit=(e)=>{
+    e.preventDefault(); //본래 클릭 시 일어나는 모든 동작들을 막음
+
+
+    const variables={
+      routinName: RoutinName,
+      videoName: VideoName,
+      videoLink: VideoLink,
+      routinContent: RoutinContent,
+      goalday: GoalDay
+    }
+
+    /*const variables={
+    }
+    axios.post('/api/video/ExerciseRecording',variables)
+        .then(response=>{
+            if(response.data.success){
+                console.log(response.data)
+
+                message.success('성공적으로 그룹을 생성했습니다!')
+
+                setTimeout(()=>{
+                    props.history.push('/exerciseFinish')
+                },3000);
+
+            }else{
+                alert('그룹 생성에 실패 했습니다')
+            }
+        })
+    }*/
+  }
+
 
   const open={show}
-  const header="냐냐냐안녕하새융"
   console.log('안녕하세요')
   
   return (
@@ -18,29 +87,46 @@ function CreateGroupModal ({show,onHide}){
               &times;
             </button>
           <main>
-            <p className='makeRoutin'>루틴 만들기 </p>
+            <h2 className='makeRoutin'>루틴 만들기 </h2>
 
             <p className='text'>루틴명</p>
-            <input type="text" className='routinName'></input>
+            <input type="text" className='routinName' style={{width: '500px' ,
+  height: '36px'}} onChange={onRoutinNameChange}></input>
 
-            
-            <p className='text'>운동 영상 제목</p>
+            <div className='clearfix'>
+              <div style={{float:'left' ,marginRight:'35px'}}>
+                <p className='text'>운동 영상 제목</p>
+                <input type="text" className='routinName' onChange={onVideoNameChange} style={{width: '230px' ,
+      height: '36px'}}></input>
+              </div>
 
-            <p className='text'>영상 링크</p>
-            <p className='text'>목표 운동 요일</p>
+              <div style={{float:'left'}}>
+              <p className='text'>영상 링크</p>
+              <input type="text" className='routinName' onChange={onVideoLinkChange} style={{width: '230px' ,
+      height: '36px'}}></input>
+              </div>
+            </div>
 
-            <p className='text'>세트 반복 횟수</p>
+            <div className='clearfix'>
+              <div style={{float:'left' ,marginRight:'35px'}}>
+                <p className='text'>목표 운동 요일</p>
+                <select onChange={onGoalDayChange}>
+                  {GoalDayOptions.map((item,index)=>(
+                    <option key={index} value={item.value}>{item.label}</option>
+                  ))}
+                </select>
+              </div>
+
+              <p className='text'>세트 반복 횟수</p>
+            </div>
+
             <p className='text'>루틴설명</p>
 
-            <textarea className='RecText2' placeholder='텍스트를 입력하세요' ></textarea>
+            <textarea className='RecText2' onChange={onRoutinContentChange} placeholder='텍스트를 입력하세요' ></textarea>
 
+            <input type='button' value='만들기' className='submit' onClick={onSubmit} /> 
             
           </main>
-          <footer>
-            <button className="close" onClick={onHide}>
-              close
-            </button>
-          </footer>
         </section>
       ) : null}
     </div>
