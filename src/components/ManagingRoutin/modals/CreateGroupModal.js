@@ -126,7 +126,7 @@ function CreateGroupModal ({show,onHide}){
             <div className='clearfix'>
               <div style={{float:'left' ,marginRight:'35px'}}>
                 <p className='text'>목표 운동 요일</p>
-                <select style={{position:'relative' , left:'100px'}} onChange={onGoalDayChange}>
+                <select style={{position:'relative' , left:'96px' ,outline:'none', border:'none' , color:'#FF855E'}} onChange={onGoalDayChange}>
                   {GoalDayOptions.map((item,index)=>(
                     <option key={index} value={item.value}>{item.label}</option>
                   ))}
@@ -134,7 +134,7 @@ function CreateGroupModal ({show,onHide}){
               </div>
 
               <p className='text'>세트 반복 횟수</p>
-              <select style={{position:'relative' , left:'100px'}} onChange={onSetRepChange}>
+              <select style={{position:'relative' , left:'100px' ,outline:'none', border:'none', color:'#FF855E'}} onChange={onSetRepChange}>
                   {SetRepOptions.map((item,index)=>(
                     <option key={index} value={item.value}>{item.label}</option>
                   ))}

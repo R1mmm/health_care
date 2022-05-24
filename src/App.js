@@ -10,6 +10,7 @@ import Mypage from './components/Mypage/Mypage';
 import Managingfriend from './components/Managingfriend/Managingfriend';
 import ManagingRoutin from './components/ManagingRoutin/ManagingRoutin';
 import SettingAccount from './components/Mypage/SettingAccount/SettingAccount';
+import GroupList from './components/GroupList/GroupList';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/manageFriend" exact element={<Managingfriend/>}/>
                     <Route path="/manageRoutin" exact element={<ManagingRoutin/>}/>
                     <Route path="/settingAccount" exact element={<SettingAccount/>}/>
+                    <Route path="/groupList" exact element={<GroupList/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

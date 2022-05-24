@@ -29,10 +29,13 @@ function HomePage(){
                     </div>
                 </a>
 
-                <div className="block3">
-                    <img src="img/목록.png" className="list" alt="list"></img>
-                    <img src="img/list_text.png" class="list_text" alt="listhover"></img>
-                </div>
+
+                <a href={'/groupList'}>
+                    <div className="block3">
+                        <img src="img/목록.png" className="list" alt="list"></img>
+                        <img src="img/list_text.png" class="list_text" alt="listhover"></img>
+                    </div>
+                </a>
 
                 <a href={`/mypage`} >
                     <div className="block4">

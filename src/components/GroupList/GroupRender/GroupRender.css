@@ -1,0 +1,65 @@
+.testBox{
+    position: absolute;
+    width: 201px;
+    height: 133px;
+    left: 201px;
+    top: 267px;
+
+    background: #FF855E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.GroupListDiv{
+    position: absolute;
+    overflow: auto;
+    width: 860px;
+    height: 350px;
+    left: 200px;
+    top: 260px;
+
+
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+
+    grid-auto-flow: column;
+    grid-auto-columns: 220px;
+
+}
+
+.GroupListDiv::-webkit-scrollbar {
+    left: 100px;
+    height: 15px;
+}
+
+.GroupListDiv::-webkit-scrollbar-thumb {
+    background-color: #FF7246;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    height: 30%;
+    width: 30%;
+}
+
+.GroupListDiv::-webkit-scrollbar-track {
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+
+.GroupListBox{
+    position: relative;
+    width: 190px;
+    height: 133px;
+    left: 0px;
+    top: 0px;
+    object-fit: contain;
+
+    background: #FF855E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: grid;
+}
