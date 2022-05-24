@@ -19,8 +19,10 @@ function Mypage() {
         </a>
         <a href={`/manageRoutin`}>
           <div className="myPageRoutin">루틴 관리</div>
-        </a>
+        </a >
+        <a href={`/settingAccount`}>
           <div className="myPageSetting">계정 관리</div>
+        </a>
       </body>
   )
 }

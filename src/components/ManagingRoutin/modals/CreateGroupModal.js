@@ -12,6 +12,14 @@ const GoalDayOptions=[
   {value:6,label:"주 7회"},
 ]
 
+const SetRepOptions=[
+  {value:0,label:"1회"},
+  {value:1,label:"2회"},
+  {value:2,label:"3회"},
+  {value:3,label:"4회"},
+  {value:4,label:"5회"},
+]
+
 function CreateGroupModal ({show,onHide}){
 
   //현재 로그인된 유저 정보 / 그룹명+영상제목+태그도 함께보내줘야함
@@ -20,6 +28,7 @@ function CreateGroupModal ({show,onHide}){
   const[VideoLink,setVideoLink]=useState("");
   const[RoutinContent,setRoutinContent]=useState("");
   const[GoalDay,setGoalDay]=useState(0); //주 1회면 0, 주2회면 1 ...
+  const[SetRep,setSetRep]=useState(0);
 
   const onRoutinNameChange = (e) => {
     setRoutinName(e.currentTarget.value);
@@ -41,9 +50,14 @@ function CreateGroupModal ({show,onHide}){
     setGoalDay(e.currentTarget.value);
   };
 
+  const onSetRepChange= (e) => {
+    setSetRep(e.currentTarget.value);
+  };
+
 
   const onSubmit=(e)=>{
     e.preventDefault(); //본래 클릭 시 일어나는 모든 동작들을 막음
+
 
 
     const variables={
@@ -51,8 +65,11 @@ function CreateGroupModal ({show,onHide}){
       videoName: VideoName,
       videoLink: VideoLink,
       routinContent: RoutinContent,
-      goalday: GoalDay
+      goalday: GoalDay,
+      setRep: SetRep
     }
+
+    alert(variables.routinName)
 
     /*const variables={
     }
@@ -76,7 +93,6 @@ function CreateGroupModal ({show,onHide}){
 
 
   const open={show}
-  console.log('안녕하세요')
   
   return (
 
@@ -110,7 +126,7 @@ function CreateGroupModal ({show,onHide}){
             <div className='clearfix'>
               <div style={{float:'left' ,marginRight:'35px'}}>
                 <p className='text'>목표 운동 요일</p>
-                <select onChange={onGoalDayChange}>
+                <select style={{position:'relative' , left:'100px'}} onChange={onGoalDayChange}>
                   {GoalDayOptions.map((item,index)=>(
                     <option key={index} value={item.value}>{item.label}</option>
                   ))}
@@ -118,6 +134,11 @@ function CreateGroupModal ({show,onHide}){
               </div>
 
               <p className='text'>세트 반복 횟수</p>
+              <select style={{position:'relative' , left:'100px'}} onChange={onSetRepChange}>
+                  {SetRepOptions.map((item,index)=>(
+                    <option key={index} value={item.value}>{item.label}</option>
+                  ))}
+                </select>
             </div>
 
             <p className='text'>루틴설명</p>

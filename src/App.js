@@ -9,7 +9,10 @@ import ExerciseRecording from './components/ExerciseRecording/ExerciseRecording'
 import Mypage from './components/Mypage/Mypage';
 import Managingfriend from './components/Managingfriend/Managingfriend';
 import ManagingRoutin from './components/ManagingRoutin/ManagingRoutin';
+import SettingAccount from './components/Mypage/SettingAccount/SettingAccount';
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
     return (
@@ -24,6 +27,7 @@ function App() {
                     <Route path="/mypage" exact element={<Mypage/>}/>
                     <Route path="/manageFriend" exact element={<Managingfriend/>}/>
                     <Route path="/manageRoutin" exact element={<ManagingRoutin/>}/>
+                    <Route path="/settingAccount" exact element={<SettingAccount/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

@@ -14,6 +14,7 @@
     left: 0;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.1);
+
   }
   .modal button {
     outline: none;
@@ -112,9 +113,9 @@
   .RecText2 {
     position: relative;
     width: 500px;
-    height: 100px;
+    height: 85px;
     left: 100px;
-    top: 10px;
+    top: -10px;
 
     background: #F3F3F3;
     border-radius: 5px;
@@ -161,6 +162,8 @@
 
   color:#484848;
   outline: none;
+
+  background: none;
 }
 
 .submit{
@@ -168,7 +171,7 @@
   width: 80px;
   height: 37px;
   left: -200px;
-  top: 50px;
+  top: 25px;
 
   background: #FF855E;
   border-radius: 30px;
