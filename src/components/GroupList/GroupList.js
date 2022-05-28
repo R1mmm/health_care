@@ -15,28 +15,33 @@ function Grouplist() {
 
     const groupList=[
         {
-          friendName:"조소연",
+          VideoName:"하체운동",
           groupName:"그룹1",
           memo:"#등 #열심히",
           rate:"80%",
+          member: 15,
+          groupId:0
         },
         {
-          friendName:"양경훈",
-          groupName:"그룹1",
-          memo:"운동 열심히",
-          rate:"90%",
-        },
-        {
-          friendName:"이하늘",
-          groupName:"아자자자자",
-          memo:"공부시러",
+          VideoName:"등운동",
+          groupName:"그룹200",
+          memo:"#등 #열심히",
           rate:"80%",
+          groupId:1
+        },
+        {
+          VideoName:"매일20분홈트",
+          groupName:"그룹300",
+          memo:"#등 #열심히",
+          rate:"80%",
+          groupId:2
         },
         {
           friendName:"나림",
           groupName:"아자자자자",
           memo:"",
           rate:"100%",
+          groupId:3
         },
         {
           friendName:"나림",

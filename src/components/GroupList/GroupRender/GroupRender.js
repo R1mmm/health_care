@@ -1,19 +1,24 @@
-import { render } from '@testing-library/react'
+
 import React from 'react'
 import './GroupRender.css'
+import { Link } from 'react-router-dom'
 
 function GroupRender({sort,groupList}) {
 
     function GroupBox({ groupList }) {
         return (
-          <a href={`/exerciseGroup`} style={{margin:"10px 30px 25px 0px"}}>
-            <div className="GroupListBox" >
+            //Link를 통해 props 데이터 전달
+            <Link to={`/groupMain/${groupList.groupId}`}
+            state={{
+                groupList : groupList
+                }}>
+            <div className="GroupListBox">
               <p className="Mrate">출석률     {groupList.rate}</p>
               <p className="MfriendName">{groupList.friendName}</p>
               <p className="MgroupName">{groupList.groupName}</p>
               <p className="Mmemo">{groupList.memo}</p>
             </div>
-          </a>
+            </Link>
         )
       }
 

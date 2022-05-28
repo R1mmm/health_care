@@ -11,6 +11,7 @@ import Managingfriend from './components/Managingfriend/Managingfriend';
 import ManagingRoutin from './components/ManagingRoutin/ManagingRoutin';
 import SettingAccount from './components/Mypage/SettingAccount/SettingAccount';
 import GroupList from './components/GroupList/GroupList';
+import GroupMain from './components/GroupMain/GroupMain';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -22,7 +23,7 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<HomePage/>} />
                     <Route path="/exercise" exact element={<ExerciseHome/>}/>
-                    <Route path="/exerciseGroup" exact element={<ExerciseGruop/>}/>
+                    <Route path="/exerciseGroup/:groupId" exact element={<ExerciseGruop/>}/>
                     <Route path="/exerciseFinish" exact element={<ExerciseFinish/>}/>
                     <Route path="/exerciseRecording" exact element={<ExerciseRecording/>}/>
                     <Route path="/mypage" exact element={<Mypage/>}/>
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/manageRoutin" exact element={<ManagingRoutin/>}/>
                     <Route path="/settingAccount" exact element={<SettingAccount/>}/>
                     <Route path="/groupList" exact element={<GroupList/>}/>
+                    <Route path="/groupMain/:groupId" exact element={<GroupMain/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

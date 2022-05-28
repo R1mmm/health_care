@@ -1,0 +1,79 @@
+.videoNameSt{
+    position: absolute;
+    width: 213px;
+    height: 50px;
+    left: 200px;
+    top: 88px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF855E;
+}
+
+.groupNameSt{
+    position: absolute;
+    width: 212px;
+    height: 68px;
+    left: 201px;
+    top: 110px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #FF855E;
+}
+
+.groupMemberCount{
+    position: absolute;
+    width: 213px;
+    height: 50px;
+    left: 561px;
+    top: 138px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF855E;
+    }
+
+.groupMainRate{
+    position: absolute;
+    width: 213px;
+    height: 50px;
+    left: 774px;
+    top: 119px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #FF855E;
+}
+
+.groupMainMemo{
+    position: absolute;
+    width: 213px;
+    height: 50px;
+    left: 201px;
+    top: 207px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #FF855E;
+}
