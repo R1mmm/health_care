@@ -16,11 +16,12 @@ function Grouplist() {
     const groupList=[
         {
           VideoName:"하체운동",
-          groupName:"그룹1",
-          memo:"#등 #열심히",
+          groupName:"운동만이 살 길!",
+          memo:"저희는 하체를 열심히 해볼건데요 열심히 운동합시다",
           rate:"80%",
           member: 15,
-          groupId:0
+          groupId:0,
+          videoUrl:'https://youtu.be/LGzhC9prUPw'
         },
         {
           VideoName:"등운동",

@@ -3,7 +3,7 @@
     width: 213px;
     height: 50px;
     left: 200px;
-    top: 88px;
+    top: 85px;
 
     font-family: 'SUIT Variable';
     font-style: normal;
@@ -16,9 +16,9 @@
 
 .groupNameSt{
     position: absolute;
-    width: 212px;
+    width: 300px;
     height: 68px;
-    left: 201px;
+    left: 195px;
     top: 110px;
 
     font-family: 'SUIT Variable';
@@ -35,7 +35,7 @@
     width: 213px;
     height: 50px;
     left: 561px;
-    top: 138px;
+    top: 130px;
 
     font-family: 'SUIT Variable';
     font-style: normal;
@@ -51,7 +51,7 @@
     width: 213px;
     height: 50px;
     left: 774px;
-    top: 119px;
+    top: 110px;
 
     font-family: 'SUIT Variable';
     font-style: normal;
@@ -64,10 +64,10 @@
 
 .groupMainMemo{
     position: absolute;
-    width: 213px;
+    width: 400px;
     height: 50px;
     left: 201px;
-    top: 207px;
+    top: 190px;
 
     font-family: 'SUIT Variable';
     font-style: normal;
@@ -76,4 +76,136 @@
     line-height: 20px;
 
     color: #FF855E;
+}
+
+.exerciseVideo{
+    position: absolute;
+    left: 200px;
+    top: 260px;
+    width:200px;
+
+
+}
+
+.commentBox{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 773px;
+    top: 260px;
+
+    overflow: auto;
+
+}
+
+.commentBox::-webkit-scrollbar {
+    width: 20px;
+}
+
+.commentBox::-webkit-scrollbar-thumb {
+    background-color: #ededed;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    height: 30%;
+}
+
+.commentBox::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+
+.comment{
+    position: relative;
+    width: 307px;
+    height: 52.9px;
+    left: 0px;
+    top: 0px;
+
+    margin-bottom: 20px;
+}
+
+.commentContent{
+    position: relative;
+    width: 270px;
+    height: 20px;
+    left: 15px;
+    top: -43px;
+
+    color: #FF855E;
+}
+
+.line{
+    position: absolute;
+    width: 308px;
+    height: 10px;
+    height: 0px;
+    left: 773px;
+    top: 600px;
+
+    border: solid 0.5px #FF855E ;
+    background-color: #FF855E;
+}
+
+.commentInput{
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    left: 770px;
+    top: 635px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #3f3f3f;
+    background: #ffffff;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.commentInput::placeholder{
+    color: #FF855E;
+    font-size: 13px;
+    font-family: 'SUIT Variable';
+    font-style: normal;
+}
+
+.commentSave{
+    position: absolute;
+    width: 30px;
+    height: 16px;
+    left: 1054px;
+    top: 635px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+
+    background-color: white;
+    border: none;
+
+    color: #FF855E;
+}
+
+.showAttendance{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 990px;
+    top: 113px;
+    
+    background: #FF7246;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color:#ffffff;
+    cursor:pointer;
 }
