@@ -1,0 +1,91 @@
+.LoginLogo{
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    left: 600px;
+    top: 200px;
+
+}
+
+.loginBox{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 340px;
+    height: 40px;
+    left: 469px;
+    top: 258px;
+    outline: none;
+
+    border: 2px solid #FF7246;
+    border-radius: 9px;
+
+    padding-left: 15px;
+}
+
+.loginBox::placeholder{
+    font-size: 12px;
+}
+
+.passwordBox{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 340px;
+    height: 40px;
+    left: 469px;
+    top: 305px;
+    outline: none;
+
+    border: 2px solid #FF7246;
+    border-radius: 9px;
+
+    padding-left: 15px;
+}
+
+.passwordBox::placeholder{
+    font-size: 12px;
+}
+
+
+.loginButton{
+    position: absolute;
+    width: 340px;
+    height: 36px;
+    left: 468px;
+    top: 360px;
+
+    background: #FF7246;
+    border-radius: 9px;
+
+    border:none;
+    outline: none;
+}
+
+.loginButton::placeholder{
+    color: white;
+    /* align-items: center; */
+}
+
+.guide{
+    position: absolute;
+    width: 400px;
+    height: 8px;
+    left: 450px;
+    top: 250px;
+
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 25px;
+
+    color: #ff7b46;
+}
+
+.btnKakao{
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    left: 450px;
+    top: 300px;
+}

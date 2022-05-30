@@ -10,9 +10,59 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     color: #FF7246;
-    padding: 17px 0px 10px 30px;
+    padding-left: 100px;
 
     margin-bottom: 20px;
+    outline: none;
+    border: none;
+}
+.settingBox::value {
+    color:azure;
+}
+
+.settingText{
+    position: relative;
+    width: 40px;
+    height: 30px;
+    left: 438px;
+    top: 60px;
+
+    margin-bottom: 50px;
+
+    color: #FF7246;
+}
+
+.updateNic{
+    position: relative;
+    width: 100px;
+    height: 18px;
+    left: 410px;
+    top: 40px;
+
+    font-size: 13px;
+
+    font-family: 'SUIT Variable';
+    color: #FFFFFF;
+
+    background:none;
+    outline: none;
+    border: none;
+}
+
+
+.delAccount{
+    position: relative;
+    width: 60px;
+    height: 18px;
+    left: 700px;
+    top: 40px;
+
+    font-family: 'SUIT Variable';
+    font-size: 13px;
+
+    color: #FFFFFF;
+
+    background:none;
     outline: none;
     border: none;
 }

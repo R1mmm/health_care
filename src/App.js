@@ -12,6 +12,7 @@ import ManagingRoutin from './components/ManagingRoutin/ManagingRoutin';
 import SettingAccount from './components/Mypage/SettingAccount/SettingAccount';
 import GroupList from './components/GroupList/GroupList';
 import GroupMain from './components/GroupMain/GroupMain';
+import LoginPage from './components/LoginPage/LoginPage';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/settingAccount" exact element={<SettingAccount/>}/>
                     <Route path="/groupList" exact element={<GroupList/>}/>
                     <Route path="/groupMain/:groupId" exact element={<GroupMain/>}/>
+                    <Route path="/Login" exact element={<LoginPage/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
