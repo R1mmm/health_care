@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './ExerciseRecording.css'
 import axios from 'axios'
 //import styled from 'styled-components;'
+import {useLocation} from 'react-router-dom';
 
 
 let today = new Date(); // today 객체에 Date()의 결과를 넣어줬다
@@ -9,13 +10,16 @@ let time = {
   year: today.getFullYear(),  //현재 년도
   month: today.getMonth() + 1, // 현재 월
   date: today.getDate(), // 날짜
-  hours: today.getDay(), //현재 요일
+  day: today.getDay(), //현재 요일
 };
 let arrDayStr = ['일','월','화','수','목','금','토'];
 
-let timestring = `${time.year}년 ${time.month}월 ${time.date}일 ${arrDayStr[time.date-1]}요일`;
+let timestring = `${time.year}년 ${time.month}월 ${time.date}일 ${arrDayStr[time.day]}요일`;
 
 function ExerciseRecording() {
+
+  const location=useLocation()
+  console.log(location.state.groupId) //그룹Id만 넘겨받아서 해당 그룹Id DB에서 그룹명 가져올것 + 기록 저장하기
 
   //현재 로그인된 유저 정보 / 그룹명+영상제목+태그도 함께보내줘야함
   const[Kcal,setKcal]=useState("");
@@ -110,7 +114,7 @@ function ExerciseRecording() {
 
 
         <div class="picFile">
-          <label for="ex_file" onChange={addImage}>사진 추가하기</label>
+          <label for="ex_file" onChange={addImage} >사진 추가하기</label>
           <input type="file" multiple="multiple" id="ex_file" accept='.jpg,.jpeg,.png'/>
         </div>
 

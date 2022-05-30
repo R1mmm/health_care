@@ -209,3 +209,18 @@
     color:#ffffff;
     cursor:pointer;
 }
+
+.recordingButton{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 990px;
+    top: 170px;
+    
+    background: #FF7246;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color:#ffffff;
+    cursor:pointer;
+}

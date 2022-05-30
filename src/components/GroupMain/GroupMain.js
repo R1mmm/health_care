@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './GroupMain.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
 function GroupMain() {
@@ -171,6 +171,12 @@ function GroupMain() {
         <p className='groupMainMemo'>{location.state.groupList.memo}</p>
 
         <ShowingButton />
+        <Link to={`/exerciseRecording`}
+            state={{
+                groupId : location.state.groupList.groupId
+                }}>
+        <input type='button' value='운동 기록하기' className='recordingButton'/>
+        </Link>
 
         <div className='exerciseVideo'>
           <ReactPlayer url={location.state.groupList.videoUrl} playing={false} controls={false}

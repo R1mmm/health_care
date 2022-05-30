@@ -16,7 +16,7 @@ function GroupRender({sort,groupList}) {
               <p className="Mrate">출석률     {groupList.rate}</p>
               <p className="MfriendName">{groupList.friendName}</p>
               <p className="MgroupName">{groupList.groupName}</p>
-              <p className="Mmemo">{groupList.memo}</p>
+              <p className="Mmemo">{groupList.tag}</p>
             </div>
             </Link>
         )

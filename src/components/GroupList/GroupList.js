@@ -14,68 +14,54 @@ function Grouplist() {
 
 
     const groupList=[
-        {
-          VideoName:"하체운동",
-          groupName:"운동만이 살 길!",
-          memo:"저희는 하체를 열심히 해볼건데요 열심히 운동합시다",
-          rate:"80%",
-          member: 15,
-          groupId:0,
-          videoUrl:'https://youtu.be/LGzhC9prUPw'
-        },
-        {
-          VideoName:"등운동",
-          groupName:"그룹200",
-          memo:"#등 #열심히",
-          rate:"80%",
-          groupId:1
-        },
-        {
-          VideoName:"매일20분홈트",
-          groupName:"그룹300",
-          memo:"#등 #열심히",
-          rate:"80%",
-          groupId:2
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-          groupId:3
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-        },
-        {
-          friendName:"나림",
-          groupName:"아자자자자",
-          memo:"",
-          rate:"100%",
-        },
-      
-      ];
+      {
+        VideoName:"하체운동",
+        groupName:"운동만이 살 길!",
+        memo:"저희는 하체를 열심히 해볼건데요 열심히 운동합시다",
+        rate:"80%",
+        tag:"#등 #열심히",
+        psnGname:'하체하는 그룹',
+        member: 15,
+        groupId:0,
+        videoUrl:'https://youtu.be/LGzhC9prUPw'
+      },
+      {
+        VideoName:"등운동",
+        groupName:"그룹200",
+        memo:"아자아자 ㅎㅎ",
+        tag:"#등 #열심히",
+        psnGname:'등 운동하는 그룹',
+        rate:"80%",
+        groupId:1
+      },
+      {
+        VideoName:"매일20분홈트",
+        groupName:"그룹300",
+        memo:"#등 #열심히",
+        psnGname:'매일하는 그룹',
+        rate:"80%",
+        groupId:2
+      },
+      {
+        friendName:"나림",
+        groupName:"아자자자자",
+        memo:"",
+        rate:"100%",
+        groupId:3
+      },
+      {
+        friendName:"나림",
+        groupName:"아자자자자",
+        memo:"",
+        rate:"100%",
+      },
+      {
+        friendName:"나림",
+        groupName:"아자자자자",
+        memo:"",
+        rate:"100%",
+      },
+    ];
 
     const[sortOption,setSortOptions]=useState(0);
 
@@ -119,7 +105,7 @@ function Grouplist() {
             </select>
 
 
-            <input type='button' onClick={openModal} value='내 그룹 만들기' className='makeGroup'></input>
+            <input type='button' onClick={openModal} value='그룹 만들기' className='makeGroup'></input>
 
 
         {/* 조건부 렌더링 : modalOpen 변수값에 따라 루틴만들기 팝업창 띄우기 */}

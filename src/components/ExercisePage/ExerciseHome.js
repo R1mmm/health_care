@@ -1,54 +1,62 @@
 //import { render } from '@testing-library/react';
 import React from 'react';
-import './ExerciseHome.css'
+import './ExerciseHome.css';
+import {Link} from 'react-router-dom';
 
 function ExerciseHome() {
 
 
-  
   const groupList=[
     {
-      groupName:"등운동",
-      psnGname:"아자자자자",
-      tag:"#등 #열심히",
+      VideoName:"하체운동",
+      groupName:"운동만이 살 길!",
+      memo:"저희는 하체를 열심히 해볼건데요 열심히 운동합시다",
       rate:"80%",
+      tag:"#등 #열심히",
+      psnGname:'하체하는 그룹',
+      member: 15,
+      groupId:0,
+      videoUrl:'https://youtu.be/LGzhC9prUPw'
     },
     {
-      groupName:"어깨운동",
-      psnGname:"힘내자아아",
-      tag:"#함께해요",
-      rate:"90%",
+      VideoName:"등운동",
+      groupName:"그룹200",
+      memo:"아자아자 ㅎㅎ",
+      tag:"#등 #열심히",
+      psnGname:'등 운동하는 그룹',
+      rate:"80%",
+      groupId:1
     },
     {
-      groupName:"하체운동",
-      psnGname:"파이티ㅣ이이잉",
-      tag:"#안녕안녕",
-      rate:"10%",
+      VideoName:"매일20분홈트",
+      groupName:"그룹300",
+      memo:"#등 #열심히",
+      psnGname:'매일하는 그룹',
+      rate:"80%",
+      groupId:2
     },
     {
-      groupName:"하체운동",
-      psnGname:"파이티ㅣ이이잉",
-      tag:"#안녕안녕",
-      rate:"10%",
+      friendName:"나림",
+      groupName:"아자자자자",
+      memo:"",
+      rate:"100%",
+      groupId:3
     },
-    {
-      groupName:"하체운동",
-      psnGname:"파이티ㅣ이이잉",
-      tag:"#안녕안녕",
-      rate:"10%",
-    }
-  ];
+  ]
   
   function Groupbox({groupList}){
     return (
-      <a href={`/exerciseGroup`} >
+      <Link to={`/groupMain/${groupList.groupId}`}
+            state={{
+                groupList : groupList
+                }}>
         <div className="Groupbox" style={{marginBottom: '40px'}}>
           <p className="groupName">{groupList.groupName}</p>
           <p className="psnGname">{groupList.psnGname}</p>
           <p className="tag">{groupList.tag}</p>
           <p className="rate">출석률 {groupList.rate}</p>
         </div>
-      </a>
+      </Link>
       )
   }
   

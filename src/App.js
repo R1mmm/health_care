@@ -24,7 +24,7 @@ function App() {
                 <Routes>
                     <Route path="/" exact element={<HomePage/>} />
                     <Route path="/exercise" exact element={<ExerciseHome/>}/>
-                    <Route path="/exerciseGroup/:groupId" exact element={<ExerciseGruop/>}/>
+                    <Route path="/exerciseGroup" exact element={<ExerciseGruop/>}/>
                     <Route path="/exerciseFinish" exact element={<ExerciseFinish/>}/>
                     <Route path="/exerciseRecording" exact element={<ExerciseRecording/>}/>
                     <Route path="/mypage" exact element={<Mypage/>}/>
