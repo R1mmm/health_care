@@ -38,7 +38,7 @@ function SettingAccount() {
       useEffect(() => {
           if (isLoading) {
             if (nameErrorText=='') {
-                toast.success(`닉네임이 ${Nickname}로 변경됐습니다!`,{
+                toast.success(`닉네임이 ${Nickname}(으)로 변경됐습니다!`,{
                     position: toast.POSITION.BOTTOM_CENTER,
                     autoClose: 1000,
                     hideProgressBar: true

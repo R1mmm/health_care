@@ -103,9 +103,9 @@ function CreateGroupModal ({show,onHide}){
               &times;
             </button>
           <main>
-            <h2 className='makeRoutin'>루틴 만들기 </h2>
+            <h2 className='makeRoutin'>그룹 만들기 </h2>
 
-            <p className='text'>루틴명</p>
+            <p className='text'>그룹명</p>
             <input type="text" className='routinName' style={{width: '500px' ,
   height: '36px'}} onChange={onRoutinNameChange}></input>
 
@@ -141,7 +141,7 @@ function CreateGroupModal ({show,onHide}){
                 </select>
             </div>
 
-            <p className='text'>루틴설명</p>
+            <p className='text'>그룹 설명</p>
 
             <textarea className='RecText2' onChange={onRoutinContentChange} placeholder='텍스트를 입력하세요' ></textarea>
 

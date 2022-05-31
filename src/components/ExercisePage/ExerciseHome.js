@@ -20,19 +20,24 @@ function ExerciseHome() {
     },
     {
       VideoName:"등운동",
-      groupName:"그룹200",
-      memo:"아자아자 ㅎㅎ",
-      tag:"#등 #열심히",
+      groupName:"나림이네 그룹",
+      memo:"열심히 하실분만 ㅎㅎ",
+      tag:"#꾸준히 #열심히",
       psnGname:'등 운동하는 그룹',
-      rate:"80%",
-      groupId:1
+      rate:"76%",
+      member: 12,
+      groupId:1,
+      videoUrl:'https://youtu.be/OEZc_c7A7Ko'
     },
     {
       VideoName:"매일20분홈트",
-      groupName:"그룹300",
-      memo:"#등 #열심히",
+      groupName:"열정열정",
+      memo:"열정만 있으면 됩니다",
       psnGname:'매일하는 그룹',
+      tag:"#열정 #열정열정",
+      member: 9,
       rate:"80%",
+      videoUrl:'https://youtu.be/wOjnJYAn1uk',
       groupId:2
     },
     {
@@ -42,7 +47,19 @@ function ExerciseHome() {
       rate:"100%",
       groupId:3
     },
-  ]
+    {
+      friendName:"나림",
+      groupName:"아자자자자",
+      memo:"",
+      rate:"100%",
+    },
+    {
+      friendName:"나림",
+      groupName:"아자자자자",
+      memo:"",
+      rate:"100%",
+    },
+  ];
   
   function Groupbox({groupList}){
     return (

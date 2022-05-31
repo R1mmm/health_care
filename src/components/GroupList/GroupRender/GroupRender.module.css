@@ -1,0 +1,180 @@
+.testBox{
+    position: absolute;
+    width: 201px;
+    height: 133px;
+    left: 201px;
+    top: 267px;
+
+    background: #FF855E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.GroupListDiv{
+    position: absolute;
+    overflow: auto;
+    width: 860px;
+    height: 350px;
+    left: 200px;
+    top: 230px;
+
+
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+
+    grid-auto-flow: column;
+    grid-auto-columns: 220px;
+
+}
+
+.GroupListDiv::-webkit-scrollbar {
+    left: 100px;
+    height: 15px;
+}
+
+.GroupListDiv::-webkit-scrollbar-thumb {
+    background-color: #FF7246;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    height: 30%;
+    width: 30%;
+}
+
+.GroupListDiv::-webkit-scrollbar-track {
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+
+.GroupListBox{
+    position: relative;
+    width: 190px;
+    height: 133px;
+    left: 0px;
+    top: 0px;
+    object-fit: contain;
+
+    background: #FF855E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: grid;
+    margin: 10px 30px 25px 0px;
+}
+
+.MfriendName{
+    position: relative;
+    width: 103.56px;
+    height: 19.85px;
+    left: 20px;
+    top: 0px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+    
+}
+
+.MgroupName{
+    position: relative;
+    width: 124.28px;
+    height: 20.26px;
+    left: 20px;
+    top: 8px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+    
+}
+
+.Mmemo{
+    position: relative;
+    width: 124.28px;
+    height: 20.26px;
+    left: 20px;
+    top: -10px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FFFFFF;
+    
+}
+
+.Mrate{
+    position: relative;
+width: 124.28px;
+height: 20.26px;
+left: 20px;
+top: 15px;
+
+font-family: 'SUIT Variable';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+
+color: #FFFFFF;
+
+}
+
+.MvideoName{
+    position: relative;
+    width: 124.28px;
+    height: 20.26px;
+    left: 20px;
+    top: -5px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+}
+
+.Mmembers{
+    position: absolute;
+    width: 124.28px;
+    height: 20.26px;
+    left: 130px;
+    top: 17px;
+    
+    font-family: 'SUIT Variable';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+    
+    color: #FFFFFF;
+}
+
+.sortSelector{
+    position: absolute;
+    width: 80px;
+    height: 34px;
+    left: 202px;
+    top: 180px;
+
+    border: none;
+    outline: none;
+    color: rgba(40, 38, 33, 0.6);
+}

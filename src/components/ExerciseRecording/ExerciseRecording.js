@@ -19,7 +19,7 @@ let timestring = `${time.year}년 ${time.month}월 ${time.date}일 ${arrDayStr[t
 function ExerciseRecording() {
 
   const location=useLocation()
-  console.log(location.state.groupId) //그룹Id만 넘겨받아서 해당 그룹Id DB에서 그룹명 가져올것 + 기록 저장하기
+  //console.log(location.state.groupId) //그룹Id만 넘겨받아서 해당 그룹Id DB에서 그룹명 가져올것 + 기록 저장하기
 
   //현재 로그인된 유저 정보 / 그룹명+영상제목+태그도 함께보내줘야함
   const[Kcal,setKcal]=useState("");
@@ -56,6 +56,7 @@ function ExerciseRecording() {
     }
 
     setImage(nowImageURLList);
+    console.log(nowImageURLList)
   }
 
   const onSubmit=(e)=>{
@@ -91,6 +92,15 @@ function ExerciseRecording() {
     }*/
   }
 
+  function Imagebox({Image}){
+    return(
+      <img
+      alt="sample"
+      src={Image}
+      className="picImage"
+    />
+    )
+  }
 
 
 
@@ -113,10 +123,19 @@ function ExerciseRecording() {
         </div>
 
 
-        <div class="picFile">
-          <label for="ex_file" onChange={addImage} >사진 추가하기</label>
-          <input type="file" multiple="multiple" id="ex_file" accept='.jpg,.jpeg,.png'/>
-        </div>
+       
+        <label className='picFileLabel' htmlFor="ex_file" onChange={addImage}>
+          사진 추가하기
+          <input style={{display:'none'}} type="file" multiple id="ex_file" accept='.jpg,.jpeg,.png'/>
+        </label>
+
+        {/* 조건부 렌더링 : Image가 1개 이상이면 사진 미리보기 팝업창 띄우기 */}
+        {Image.length>0 ? (
+          <input type='button' value='사진 미리보기' className='picPreview'/>
+            ):null}
+
+      {Image.map((Image)=>(<Imagebox Image={Image}/>))}
+        
 
         <p className='RecTag'>영상 제목,   #전신 유산소 #칼로리 #다이어트</p> 
 

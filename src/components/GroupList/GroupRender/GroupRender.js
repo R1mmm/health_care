@@ -1,48 +1,73 @@
 
-import React from 'react'
-import './GroupRender.css'
+import React,{useState,useEffect} from 'react'
+import styles from './GroupRender.module.css'
 import { Link } from 'react-router-dom'
 
-function GroupRender({sort,groupList}) {
+function GroupRender({groupList}) {
 
-    function GroupBox({ groupList }) {
+    const sortOptions=[
+        {value:0,label:"기본순"},
+        {value:1,label:"가나다순"},
+        {value:2,label:"최신순"},
+    ]
+
+    const[sortOption,setSortOptions]=useState(0);
+    const [isSorting, setisSorting] = useState(false);
+    const[renderBox,setrenderBox]=useState("<div className={styles.GroupListDiv}>{groupList.map((routin)=>(<GroupBox groupList={routin}/>))}</div>")
+
+    const onSortOptionChange = (e) => {
+        setSortOptions(e.currentTarget.value);
+        setisSorting(true)
+    };
+
+    //sortOption 값이 바뀔때마다 실행하는 함수
+    useEffect(() => {
+        if (isSorting) {
+          if (sortOption==0) {
+              console.log(sortOption)
+              setisSorting(false);
+          }
+          else{
+            console.log(sortOption)
+            setisSorting(false);
+        }
+      }
+    }, [isSorting]);
+
+
+
+
+      function GroupBox({ groupList }) {
         return (
             //Link를 통해 props 데이터 전달
             <Link to={`/groupMain/${groupList.groupId}`}
             state={{
                 groupList : groupList
                 }}>
-            <div className="GroupListBox">
-              <p className="Mrate">출석률     {groupList.rate}</p>
-              <p className="MfriendName">{groupList.friendName}</p>
-              <p className="MgroupName">{groupList.groupName}</p>
-              <p className="Mmemo">{groupList.tag}</p>
+            <div className={styles.GroupListBox}>
+              <p className={styles.Mrate}>출석률     {groupList.rate}</p>
+              <p className={styles.MgroupName}>{groupList.groupName}</p>
+              <p className={styles.Mmembers}>{groupList.member}/20명</p>
+              <p className={styles.MvideoName}>{groupList.VideoName}</p>
+              <p className={styles.Mmemo}>{groupList.tag}</p>
             </div>
             </Link>
         )
       }
 
+    return(
+        <>
+            <select className={styles.sortSelector} onChange={onSortOptionChange}>
+                    {sortOptions.map((item,index)=>(
+                        <option key={index} value={item.value}>{item.label}</option>
+                    ))}
+                </select>
 
-
-    if(sort === 0) {
-        return (
-            <div className='GroupListDiv'>
+            <div className={styles.GroupListDiv}>
                 {groupList.map((routin)=>(<GroupBox groupList={routin}/>))}
             </div>
-        )
-    }
-    else if(sort === 1) {
-        return (
-            <p>가나다순입니다</p>
-        )
-    
-    
-    }
-    else if(sort === 2) {
-        return (
-            <p>최신순입니다</p>
-        )
-    }
+        </>
+    )
 }
 
 export default GroupRender

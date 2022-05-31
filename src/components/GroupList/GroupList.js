@@ -6,11 +6,11 @@ import GroupRender from './GroupRender/GroupRender';
 
 function Grouplist() {
 
-    const sortOptions=[
-        {value:0,label:"기본순"},
-        {value:1,label:"가나다순"},
-        {value:2,label:"최신순"},
-    ]
+    // const sortOptions=[
+    //     {value:0,label:"기본순"},
+    //     {value:1,label:"가나다순"},
+    //     {value:2,label:"최신순"},
+    // ]
 
 
     const groupList=[
@@ -27,19 +27,24 @@ function Grouplist() {
       },
       {
         VideoName:"등운동",
-        groupName:"그룹200",
-        memo:"아자아자 ㅎㅎ",
-        tag:"#등 #열심히",
+        groupName:"나림이네 그룹",
+        memo:"열심히 하실분만 ㅎㅎ",
+        tag:"#꾸준히 #열심히",
         psnGname:'등 운동하는 그룹',
-        rate:"80%",
-        groupId:1
+        rate:"76%",
+        member: 12,
+        groupId:1,
+        videoUrl:'https://youtu.be/OEZc_c7A7Ko'
       },
       {
         VideoName:"매일20분홈트",
-        groupName:"그룹300",
-        memo:"#등 #열심히",
+        groupName:"열정열정",
+        memo:"열정만 있으면 됩니다",
         psnGname:'매일하는 그룹',
+        tag:"#열정 #열정열정",
+        member: 9,
         rate:"80%",
+        videoUrl:'https://youtu.be/wOjnJYAn1uk',
         groupId:2
       },
       {
@@ -63,11 +68,11 @@ function Grouplist() {
       },
     ];
 
-    const[sortOption,setSortOptions]=useState(0);
+    // const[sortOption,setSortOptions]=useState(0);
 
-    const onSortOptionChange = (e) => {
-        setSortOptions(e.currentTarget.value);
-    };
+    // const onSortOptionChange = (e) => {
+    //     setSortOptions(e.currentTarget.value);
+    // };
 
 
 
@@ -89,7 +94,9 @@ function Grouplist() {
             <a href={`/`} >
                 <img  className="RecLogo" src="img/Logo2.png"></img>
             </a>
-            <p className='RecHome'>Home</p>
+            <a href={`/`} >
+              <p className='RecHome'>Home</p>
+            </a>
 
 
             <input type='button' className='showMyGroup' value='내 그룹 보기'></input>
@@ -98,11 +105,11 @@ function Grouplist() {
             <img className="GroupsearchLogo" src="img/search.png" alt="searchLogo"></img>
 
 
-            <select className='sortSelector' onChange={onSortOptionChange}>
+            {/* <select className='sortSelector' onChange={onSortOptionChange}>
                   {sortOptions.map((item,index)=>(
                     <option key={index} value={item.value}>{item.label}</option>
                   ))}
-            </select>
+            </select> */}
 
 
             <input type='button' onClick={openModal} value='그룹 만들기' className='makeGroup'></input>
@@ -114,7 +121,7 @@ function Grouplist() {
             ):null}
 
 
-            <GroupRender sort={sortOption} groupList={groupList}></GroupRender>
+            <GroupRender groupList={groupList}></GroupRender>
                 
         </body>
     )

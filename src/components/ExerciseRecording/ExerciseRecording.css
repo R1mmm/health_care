@@ -206,7 +206,7 @@
     overflow: hidden;
 }
 
-.picFile label {
+.picFileLabel{
     position: absolute;
     width: 90px;
     height: 30px;
@@ -225,7 +225,7 @@
     padding-top: 5px;
 }
 
-.picFile input[type="file"] {
+.picFileInput[type="file"] {
     /* 파일 필드 숨기기 */
     position: absolute;
     width: 10px;
@@ -235,6 +235,36 @@
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.picImage{
+    position: relative;
+    width: 150px;
+    padding: 10;
+    left: 300px;
+    top: 200px;
+    margin-left: 20px;
+    
+}
+
+.picPreview{
+    position: relative;
+    width: 100px;
+    height: 25px;
+    padding: 10;
+    left: 300px;
+    top: 253px;
+
+    font-family: 'Noto Sans KR';
+    border: 1.5px solid #FF7246;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 13px;
+    color:#4b4b4b;
+    border: none;
+    outline: none;
+    cursor:pointer;
+    
 }
 
 .RecTag {
