@@ -1,0 +1,14 @@
+.screen {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ff855e;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.body {
+  display: flex;
+  width: 880px;
+  margin: 0 auto;
+}

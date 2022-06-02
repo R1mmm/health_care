@@ -1,0 +1,43 @@
+.StartPage_Nav {
+  width: 80%;
+  background-color: transparent;
+  display: flex;
+  height: 71px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.StartPage_Nav-title {
+  display: flex;
+}
+.StartPage_Nav-title div {
+  width: 230px;
+  height: 23px;
+  margin-left: 10px;
+  color: #000000;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 550;
+}
+.StartPage_Nav-title img {
+  width: 45px;
+  height: 20px;
+}
+.StartPage_Nav-login {
+  display: flex;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  flex-shrink: 0;
+}
+.StartPage_Nav-login div:nth-child(1) {
+  height: 18px;
+  margin-right: 20px;
+}
+.StartPage_Navlogin div:nth-child(2) {
+  height: 18px;
+  margin-left: 27px;
+}

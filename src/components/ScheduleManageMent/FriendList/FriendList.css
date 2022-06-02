@@ -1,0 +1,40 @@
+.friendList {
+  margin-top: 200px;
+  margin-left: 65px;
+  width: 200px;
+  height: 300px;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  overflow-y: scroll;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.friend {
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  height: 46px;
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+
+.friendList::-webkit-scrollbar {
+  width: 11px; /* 스크롤바의 너비 */
+}
+.friendList::-webkit-scrollbar-thumb {
+  height: 10%; /* 스크롤바의 길이 */
+  background: #ffffff; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+.friendList::-webkit-scrollbar-track {
+  background: #ee734d;
+  opacity: 0.1; /*스크롤바 뒷 배경 색상*/
+  border-radius: 10px;
+}

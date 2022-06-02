@@ -179,8 +179,7 @@ function GroupMain() {
         </Link>
 
         <div className='exerciseVideo'>
-          <ReactPlayer url={location.state.groupList.videoUrl} playing={false} controls={false}
-          style={{width:'100%'}}/>
+          <ReactPlayer url={location.state.groupList.videoUrl} playing={false} controls={false}/>
         </div>
 
         <div className='commentBox'>

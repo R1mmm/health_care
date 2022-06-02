@@ -1,0 +1,97 @@
+.StartPage {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.StartPage-main {
+  width: 100%;
+  height: 650px;
+}
+.StartPage-main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  z-index: -1;
+  background-size: contain;
+  background-position: center;
+}
+.StartPage-main-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 9.5%;
+  transform: translateY(125px);
+}
+.StartPage-main-content1 {
+  width: 669px;
+  height: 50px;
+
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  /* identical to box height */
+
+  color: #000000;
+  margin-bottom: 15px;
+}
+.StartPage-main-content2 {
+  width: 490px;
+  height: 71px;
+
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 125%;
+  /* or 20px */
+
+  letter-spacing: -0.045em;
+
+  color: #000000;
+  margin-bottom: 54px;
+}
+.StartPage-main-content3 {
+  width: 125px;
+  height: 47px;
+  background: #ff7246;
+  border-radius: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.StartPage-greeting {
+  text-align: center;
+  margin-top: 50px;
+}
+.StartPage-greeting div:nth-child(1) {
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 128%;
+  /* or 31px */
+  letter-spacing: -0.025em;
+  color: #2e2727;
+  margin-bottom: 27px;
+}
+.StartPage-greeting div:nth-child(2) {
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 136.5%;
+  /* or 22px */
+
+  letter-spacing: -0.025em;
+
+  color: #000000;
+}

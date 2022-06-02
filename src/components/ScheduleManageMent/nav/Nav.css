@@ -1,0 +1,14 @@
+.Nav_nav {
+  display: flex;
+  height: 71px;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 880px;
+  color: #ffffff;
+  border: none;
+}
+.Nav_nav img {
+  width: 250px;
+  height: 23px;
+}

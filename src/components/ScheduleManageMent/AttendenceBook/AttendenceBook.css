@@ -1,0 +1,183 @@
+.Attendence_screen {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ff855e;
+  box-sizing: border-box;
+}
+.Attendence {
+  width: 950px;
+  height: 391px;
+  margin: 41px auto;
+  display: flex;
+}
+
+.Attendence_year-month {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 15px;
+
+  color: #ffffff;
+}
+
+.Attendence_nav {
+  display: flex;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+.Attendence_go-prev .Attendence_nav-btn {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Attendence_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 750px;
+}
+.Attendence_header .Attendence_left {
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.Attendence_header .Attendence_right {
+  display: flex;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.Attendence_header .Attendence_go-next {
+  height: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.Attendence_go-today {
+  width: 75px;
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+.Attendence_days {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.Attendence_day {
+  width: 51px;
+  height: 32px;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.Attendence_dates {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 750px;
+  height: 371px;
+  background: #ffffff;
+  box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.Attendence_date {
+  display: flex;
+  justify-content: center;
+  color: #ff855e;
+  align-items: center;
+  flex-grow: 1;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  width: 103px;
+  height: 73px;
+}
+.Attendence_main {
+  width: 720px;
+  height: 341px;
+}
+.Attendence_attendanceRate {
+  margin-top: 100px;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 50px;
+  color: #ffffff;
+}
+
+.Attendence_attendanceRate-high {
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.Attendence_friend {
+  display: flex;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 181%;
+  margin-bottom: 5px;
+}
+.Attendence_friend div:nth-child(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  width: 80px;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 181%;
+}
+.Attendence_friend div:nth-child(2) {
+  margin-left: 30px;
+}
+
+.Attendence_RemainderFriends {
+  width: 150px;
+  height: 200px;
+  background: #ffffff;
+  box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "SUIT Variable";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 195%;
+  /* or 25px */
+  margin-top: 50px;
+  color: #ff855e;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Attendence_Remainder {
+  width: 50%;
+  text-align: center;
+}

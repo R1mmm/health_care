@@ -13,6 +13,11 @@ import SettingAccount from './components/Mypage/SettingAccount/SettingAccount';
 import GroupList from './components/GroupList/GroupList';
 import GroupMain from './components/GroupMain/GroupMain';
 import LoginPage from './components/LoginPage/LoginPage';
+import ScheduleManageMent from "./components/ScheduleManageMent/ScheduleManageMent";
+import Modal from "./components/ScheduleManageMent/Modal/Modal";
+import AttendenceBook from "./components/ScheduleManageMent/AttendenceBook/AttendenceBook";
+import StartPage from "./components/startPage/startPage";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -23,6 +28,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" exact element={<HomePage/>} />
+                    <Route path="/startPage" element={<StartPage />} />
                     <Route path="/exercise" exact element={<ExerciseHome/>}/>
                     <Route path="/exerciseGroup" exact element={<ExerciseGruop/>}/>
                     <Route path="/exerciseFinish" exact element={<ExerciseFinish/>}/>
@@ -34,6 +40,10 @@ function App() {
                     <Route path="/groupList" exact element={<GroupList/>}/>
                     <Route path="/groupMain/:groupId" exact element={<GroupMain/>}/>
                     <Route path="/Login" exact element={<LoginPage/>}/>
+                    <Route path="/scheduleManageMent" element={<ScheduleManageMent />}>
+                        <Route path=":calenderID" element={<Modal />} />
+                    </Route>
+                    <Route path="/AttendenceBook" element={<AttendenceBook />} />
                 </Routes>
             </BrowserRouter>
         </div>
