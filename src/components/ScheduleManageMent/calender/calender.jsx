@@ -54,8 +54,7 @@ const Calender = () => {
       nextDates.push(i);
     }
     setCurrentDay([...prevDates, ...thisDates, ...nextDates]);
-    console.log(currentDays);
-    console.log(now);
+
     SetNow(now);
   }
   const prevMonth = () => {
@@ -78,7 +77,7 @@ const Calender = () => {
       <div className="main">
         <div className="header">
           <div onClick={() => prevMonth()} className="nav-btn go-prev">
-            &lt;
+            &gt;
           </div>
           <div className="year-month">{`${viewYear}년 ${viewMonth + 1}월`}</div>
           <div onClick={() => nextMonth()} className="nav-btn go-next">
@@ -96,13 +95,9 @@ const Calender = () => {
         </div>
         <div
           onClick={(e) => {
+            console.log(colorCheck);
             let id = e.target.id;
-            console.log(e);
             if (id == "") return;
-            console.log(id);
-            colorCheck.map((check) => {
-              console.log(check.id);
-            });
             setFound(
               setColorCheck(colorCheck.find((id) => id.id === e.target.id))
             );
@@ -128,19 +123,31 @@ const Calender = () => {
                   condition === "this"
                     ? colorCheck.find(
                         (check) =>
-                          check.id == viewYear + "" + viewMonth + i + ""
+                          check.id ==
+                          viewYear +
+                            " " +
+                            (viewMonth + 1) +
+                            " " +
+                            (date + " ") +
+                            i
                       )
                       ? "date this checkColor"
                       : "date this"
                     : colorCheck.find(
                         (check) =>
-                          check.id == viewYear + "" + viewMonth + i + ""
+                          check.id ==
+                          viewYear +
+                            " " +
+                            (viewMonth + 1) +
+                            " " +
+                            (date + " ") +
+                            i
                       )
                     ? "date other checkColor"
                     : "date other"
                 }
                 index={i}
-                id={viewYear + "" + viewMonth + i + ""}
+                id={viewYear + " " + (viewMonth + 1) + " " + (date + " ") + i}
               >
                 {date}
               </div>
