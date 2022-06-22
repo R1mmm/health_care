@@ -29,4 +29,4 @@ export const friendList = atom({
 export const checkColor = atom({
   key: "Color",
   default: [{ id: 0, check: false }],
-});
+}); //출석 되어있는 날짜
