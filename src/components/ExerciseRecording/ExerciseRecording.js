@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './ExerciseRecording.css'
 import axios from 'axios'
 //import styled from 'styled-components;'
@@ -55,8 +55,22 @@ function ExerciseRecording() {
       nowImageURLList.push(nowImageURL);
     }
 
-    setImage(nowImageURLList);
-    console.log(nowImageURLList)
+    setImage(Image=>([...Image,...nowImageURLList]));
+    console.log('이미지 추가 기능'+Image)
+  }
+  // useEffect(() => {
+  //   console.log('Image변경될때마다 리렌더링')
+  // },Image)
+
+  const onRemove=(ImageId)=>{
+
+    const newImage=Image.filter((Image) => Image !== ImageId)
+    setImage(Image=>([...Image,...newImage]));
+    setTimeout(()=>{
+      console.log('삭제 기능'+Image)
+    },1000)
+
+
   }
 
   const onSubmit=(e)=>{
@@ -94,13 +108,13 @@ function ExerciseRecording() {
 
   function Imagebox({Image}){
     return(
-   
+      <div>
+        <button className="removeImage" onClick={()=> onRemove(Image)}>&times;</button>
         <img
         alt="sample"
         src={Image}
-        className="picImage"
-        />
-  
+        className="picImage"></img>
+      </div>
     )
   }
 

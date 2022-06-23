@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import './GroupList.css'
 import CreateGroupModal from '../ManagingRoutin/modals/CreateGroupModal';
 import GroupRender from './GroupRender/GroupRender';
@@ -79,6 +79,8 @@ function Grouplist() {
 
 
     const [modalOpen, setModalOpen] = useState(false);
+    const [searchText,setsearchText]=useState("");
+    const [renderGroupList,setrenderGroupList]=useState(groupList);
 
 
     const openModal=()=>{
@@ -88,6 +90,26 @@ function Grouplist() {
     const closeModal=()=>{
         setModalOpen(false)
     };
+
+    const onsearchTextChange = (e) => {
+      setsearchText(e.currentTarget.value);
+    };
+
+  
+    const onsearch=(e)=>{
+      if (searchText==""){
+        setrenderGroupList(groupList)
+      }
+      else if((groupList.filter((groupList) => groupList.groupName.toLowerCase().includes(searchText.toLowerCase()))).length>0){
+        setrenderGroupList(groupList.filter((groupList) => groupList.groupName.toLowerCase().includes(searchText.toLowerCase())))
+      }
+      else{
+        console.log('해당하는 그룹이 없습니다')
+        setrenderGroupList([])
+        console.log(renderGroupList)
+      }
+    } 
+
 
     return (
         <body className='Recbody'> 
@@ -102,8 +124,9 @@ function Grouplist() {
 
             <input type='button' className='showMyGroup' value='내 그룹 보기'></input>
 
-            <input type="text" className="GroupSearchBox" placeholder="검색어를 입력하세요"></input>
-            <img className="GroupsearchLogo" src="img/search.png" alt="searchLogo"></img>
+            <input type="text" className="GroupSearchBox"
+            onChange={onsearchTextChange} placeholder="검색어를 입력하세요"></input>
+            <img className="GroupsearchLogo" src="img/search.png" alt="searchLogo" onClick={onsearch}></img>
 
 
             {/* <select className='sortSelector' onChange={onSortOptionChange}>
@@ -121,9 +144,7 @@ function Grouplist() {
           <CreateGroupModal show={modalOpen} onHide={closeModal}/>
             ):null}
 
-
-            <GroupRender groupList={groupList}></GroupRender>
-                
+        <GroupRender groupList={renderGroupList}></GroupRender>
         </body>
     )
 }

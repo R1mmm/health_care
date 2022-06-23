@@ -227,7 +227,7 @@
     width: 500px;
     height: 110px;
     left: 300px;
-    top: 200px;
+    top: 170px;
     display: grid;
     grid-template-rows: repeat(1,200px);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -235,14 +235,23 @@
 }
 
 .picImage{
-    /* position: relative; */
-    width: 150px;
+    
+    height: 130px;
     grid-column: auto;
     /* padding: 10;
     left: 300px;
     top: 200px;
     margin-left: 20px; */
     
+}
+
+.removeImage{
+    position: relative;
+    background:none;
+    left: 110px;
+    top:23px;
+    width: 20px;
+    height: 20px;
 }
 
 .picPreview{
@@ -292,6 +301,7 @@
     background: #F3F3F3;
     border-radius: 5px;
     margin-top: 10px ;
+    margin-bottom: 20px;
     border: none;
     resize: none;
     outline: none;

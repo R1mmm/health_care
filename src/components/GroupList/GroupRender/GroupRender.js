@@ -62,7 +62,9 @@ function GroupRender({groupList}) {
                         <option key={index} value={item.value}>{item.label}</option>
                     ))}
                 </select>
-
+            {groupList.length==0 ? (
+                <div className={styles.NoGroup}>해당하는 그룹이 없습니다</div>
+            ):null}
             <div className={styles.GroupListDiv}>
                 {groupList.map((routin)=>(<GroupBox groupList={routin}/>))}
             </div>

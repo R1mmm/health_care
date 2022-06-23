@@ -178,3 +178,14 @@ color: #FFFFFF;
     outline: none;
     color: rgba(40, 38, 33, 0.6);
 }
+
+.NoGroup{
+    position: absolute;
+    font-size: 20px;
+    width: 860px;
+    height: 350px;
+    left: 210px;
+    top: 280px;
+
+    color: rgb(71, 71, 71);
+}
