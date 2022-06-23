@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import './SettingAccount.css'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {Link} from 'react-router-dom';
 
 
 function SettingAccount() {
@@ -58,11 +59,11 @@ function SettingAccount() {
 
   return (
       <body className='homebody'>
-          <a href={`/`}>
+          <Link to="/">
               <div className="Homelogo">
                   <img src="img/Logo.png" width="100%" height="23px" alt="Logo"></img>
               </div>
-          </a>
+          </Link>
           <div className="logout">
               <p style={{ color: '#FFFFFF' }}>Logout</p>
           </div>

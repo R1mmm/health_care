@@ -80,11 +80,11 @@ function ExerciseHome() {
 
   return (
     <div className='homebody'>
-      <a href={`/`} >
+      <Link to="/">
         <div className="esclogo">
           <img src="img/Logo.png" width="100%" height="23px" ></img>
         </div>
-      </a>
+      </Link>
       <p className='logout'>Logout</p>
 
 

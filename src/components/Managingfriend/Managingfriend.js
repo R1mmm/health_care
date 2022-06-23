@@ -1,6 +1,6 @@
 import React from 'react'
 import './Managingfriend.css'
-
+import {Link} from 'react-router-dom';
 function Managingfriend() {
 
 /*
@@ -54,25 +54,25 @@ function Managingfriend() {
     
   function Friendbox({ friendList }) {
     return (
-      <a href={`/exerciseGroup`} >
+      <Link to="/exerciseGroup">
         <div className="friendBox" style={{ marginBottom: '30px' }}>
           <p className="Mrate">출석률     {friendList.rate}</p>
           <p className="MfriendName">{friendList.friendName}</p>
           <p className="MgroupName">{friendList.groupName}</p>
           <p className="Mmemo">{friendList.memo}</p>
         </div>
-      </a>
+      </Link>
     )
   }
       
   return (
     <body className='Recbody'>
-      <a href={`/`} >
+      <Link to="/">
         <img className="RecLogo" src="img/Logo2.png"></img>
-      </a>
-      <a href={`/`} >
+      </Link>
+      <Link to="/">
         <p className='RecHome'>Home</p>
-      </a>
+      </Link>
 
 
       <input type="text" className="searchBox" placeholder="아이디로 친구 맺기"></input>

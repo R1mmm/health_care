@@ -7,6 +7,9 @@
 .homebody{
     background-color: #FF8762;
     font-family: 'Noto Sans KR';
+    /* height: 100vh; */
+    min-height:100vh;
+    width: 100vw;
     height: 100vh;
 
 }
@@ -45,7 +48,6 @@
     
     color: #FFFFFF;
 }
-
 .block1{
     position:relative;
     width: 117.32px;

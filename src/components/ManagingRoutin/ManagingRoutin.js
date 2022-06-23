@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './ManagingRoutin.css';
 import CreateGroupModal from './modals/CreateGroupModal';
-
+import {Link} from 'react-router-dom'
 
 function ManagingRoutin() {
 
@@ -63,14 +63,14 @@ function ManagingRoutin() {
   ];
   function RoutinBox({ routinList }) {
     return (
-      <a href={`/exerciseGroup`} style={{margin:"10px 30px 25px 0px"}}>
+      <Link to="/exerciseGroup" style={{margin:"10px 30px 25px 0px"}}>
         <div className="routinBox" >
           <p className="Mrate">출석률     {routinList.rate}</p>
           <p className="MfriendName">{routinList.friendName}</p>
           <p className="MgroupName">{routinList.groupName}</p>
           <p className="Mmemo">{routinList.memo}</p>
         </div>
-      </a>
+      </Link>
     )
   }
 
@@ -94,12 +94,12 @@ function ManagingRoutin() {
   
       <body className='Recbody'>
 
-        <a href={`/`}>
+        <Link to="/">
           <img className="RecLogo" src="img/Logo2.png"></img>
-        </a>
-        <a href={`/`} >
+        </Link>
+        <Link to="/">
           <p className='RecHome'>Home</p>
-        </a>
+        </Link>
 
         <input type='button' onClick={openModal} value='새로 만들기' className='createNew'></input>
 

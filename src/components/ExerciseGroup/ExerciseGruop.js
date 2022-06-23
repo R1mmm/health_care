@@ -1,5 +1,6 @@
-import React from 'react'
-import './ExerciseGroup.css'
+import React from 'react';
+import './ExerciseGroup.css';
+import {Link} from 'react-router-dom';
 
 function ExerciseGruop() {
 
@@ -8,18 +9,18 @@ function ExerciseGruop() {
   }
   return (
     <body className='homebody'>
-        <a href={`/`} >
+        <Link to="/">
             <div className="esclogo">
             <img src="img/Logo.png" width="100%" height="23px" ></img>
             </div>
-          </a>
+          </Link>
             <p className='logout'>Logout</p>
 
       <div className='box'>
             
-        <a href='/exerciseRecording'>
+        <Link to="/exerciseRecording">
           <input type='button' onClick={newPage} value='기록하기' className='record'></input>
-        </a>
+        </Link>
       </div>
   
     </body>

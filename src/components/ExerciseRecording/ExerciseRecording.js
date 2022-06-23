@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './ExerciseRecording.css'
 import axios from 'axios'
 //import styled from 'styled-components;'
-import {useLocation} from 'react-router-dom';
+import {useLocation,Link} from 'react-router-dom';
 
 
 let today = new Date(); // today 객체에 Date()의 결과를 넣어줬다
@@ -107,9 +107,9 @@ function ExerciseRecording() {
 
   return (
     <body className='Recbody'>
-      <a href={`/`} >
+      <Link to="/">
             <img  className="RecLogo" src="img/Logo2.png"></img>
-          </a>
+          </Link>
             <p className='RecHome'>Home</p>
 
 

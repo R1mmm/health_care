@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './GroupList.css'
 import CreateGroupModal from '../ManagingRoutin/modals/CreateGroupModal';
 import GroupRender from './GroupRender/GroupRender';
+import {Link} from 'react-router-dom'
 
 
 function Grouplist() {
@@ -91,12 +92,12 @@ function Grouplist() {
     return (
         <body className='Recbody'> 
         {/* ExerciseRecording에서 가져온 레이아웃 */}
-            <a href={`/`} >
+          <Link to="/">
                 <img  className="RecLogo" src="img/Logo2.png"></img>
-            </a>
-            <a href={`/`} >
+            </Link>
+            <Link to="/">
               <p className='RecHome'>Home</p>
-            </a>
+            </Link>
 
 
             <input type='button' className='showMyGroup' value='내 그룹 보기'></input>

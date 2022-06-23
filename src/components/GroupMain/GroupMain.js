@@ -158,9 +158,9 @@ function GroupMain() {
     
     //ExerciseRecording에서 가져온 body
     <body className='Recbody'> 
-        <a href={`/`} >
+        <Link to="/">
             <img  className="RecLogo" src="../img/Logo2.png"></img>
-            </a>
+            </Link>
             <p className='RecHome'>Home</p>
 
 
