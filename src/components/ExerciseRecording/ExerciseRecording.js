@@ -94,11 +94,13 @@ function ExerciseRecording() {
 
   function Imagebox({Image}){
     return(
-      <img
-      alt="sample"
-      src={Image}
-      className="picImage"
-    />
+   
+        <img
+        alt="sample"
+        src={Image}
+        className="picImage"
+        />
+  
     )
   }
 
@@ -129,13 +131,17 @@ function ExerciseRecording() {
           <input style={{display:'none'}} type="file" multiple id="ex_file" accept='.jpg,.jpeg,.png'/>
         </label>
 
-        {/* 조건부 렌더링 : Image가 1개 이상이면 사진 미리보기 팝업창 띄우기 */}
+        {/* 조건부 렌더링 : Image가 1개 이상이면 사진 미리보기 띄우기 */}
         {Image.length>0 ? (
-          <input type='button' value='사진 미리보기' className='picPreview'/>
+          <div className='ImageListBox'>
+            {Image.map((Image)=>(<Imagebox Image={Image}/>))}
+          </div>
             ):null}
 
-      {Image.map((Image)=>(<Imagebox Image={Image}/>))}
-        
+        {/* <div className='ImageListBox'>
+          {Image.map((Image)=>(<Imagebox Image={Image}/>))}
+        </div>
+         */}
 
         <p className='RecTag'>영상 제목,   #전신 유산소 #칼로리 #다이어트</p> 
 
