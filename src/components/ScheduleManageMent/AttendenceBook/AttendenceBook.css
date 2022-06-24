@@ -176,8 +176,22 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  overflow-y: scroll;
+}
+.Attendence_RemainderFriends {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.Attendence_RemainderFriends::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 .Attendence_Remainder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
-  text-align: center;
+  height: 20%;
+}
+.other {
+  color: #c4c4c4;
 }

@@ -122,6 +122,46 @@ const AttendenceBook = () => {
       nickName: "닉네임",
       attendanceRate: "43%",
     },
+    {
+      id: 2,
+      nickName: "닉네임",
+      attendanceRate: "65%",
+    },
+    {
+      id: 3,
+      nickName: "닉네임",
+      attendanceRate: "43%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임",
+      attendanceRate: "87%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임2",
+      attendanceRate: "87%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임2",
+      attendanceRate: "87%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임2",
+      attendanceRate: "87%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임2",
+      attendanceRate: "87%",
+    },
+    {
+      id: 1,
+      nickName: "닉네임2",
+      attendanceRate: "87%",
+    },
   ];
   return (
     <div className="Attendence_screen">
@@ -162,8 +202,18 @@ const AttendenceBook = () => {
           </div>
           <div className="Attendence_dates">
             {currentDays.map((date, i) => {
+              const condition =
+                i >= firstDateIndex && i < lastDateIndex + 1 ? "this" : "other";
               return (
-                <div className="Attendence_date" key={i} index={i}>
+                <div
+                  className={
+                    condition == "this"
+                      ? "Attendence_date this"
+                      : "Attendence_date other"
+                  }
+                  key={i}
+                  index={i}
+                >
                   {date}
                 </div>
               );
