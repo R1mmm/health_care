@@ -52,23 +52,18 @@ function ExerciseRecording() {
     for (let i=0; i<nowSelectImageList.length; i++){
       const nowImageURL=URL.createObjectURL(nowSelectImageList[i]);
 
-      nowImageURLList.push(nowImageURL);
+      nowImageURLList.push([nowImageURL,Image.length]);
     }
 
-    setImage(Image=>([...Image,...nowImageURLList]));
-    console.log('이미지 추가 기능'+Image)
+    setImage(Image=>nowImageURLList);
+    if(nowSelectImageList){
+      e.target.value=''
+    }
   }
-  // useEffect(() => {
-  //   console.log('Image변경될때마다 리렌더링')
-  // },Image)
 
   const onRemove=(ImageId)=>{
 
-    const newImage=Image.filter((Image) => Image !== ImageId)
-    setImage(Image=>([...Image,...newImage]));
-    setTimeout(()=>{
-      console.log('삭제 기능'+Image)
-    },1000)
+    setImage(Image=>Image.filter((Image) => Image[1] !== ImageId[1]))
 
 
   }
@@ -82,10 +77,11 @@ function ExerciseRecording() {
       kcal: Kcal,
       time: Time,
       repTime: RepTime,
-      content: Content
+      content: Content,
+      image: Image //Image배열에서 첫번째 blob 부분만 담을 수 있게 수정 해야함
     }
 
-    alert(`${Kcal}+${Time}`)
+    alert(`${Kcal}+${Image}`)
     /*const variables={
     }
     axios.post('/api/video/ExerciseRecording',variables)
@@ -112,7 +108,7 @@ function ExerciseRecording() {
         <button className="removeImage" onClick={()=> onRemove(Image)}>&times;</button>
         <img
         alt="sample"
-        src={Image}
+        src={Image[0]}
         className="picImage"></img>
       </div>
     )
@@ -131,7 +127,7 @@ function ExerciseRecording() {
 
 
         <div>
-            <p className='RecGname'>그룹명</p>
+            <p className='RecGname'>{location.state.groupName}</p>
             <p className='RecDate'>{timestring}</p>
             <p className='recKal'>칼로리</p> <input className='RecCalVal' onChange={onKcalChange}></input> 
             <p className='RecTime'>소요 시간</p> <input className='RecTimeVal' onChange={onTimeChange}></input> 

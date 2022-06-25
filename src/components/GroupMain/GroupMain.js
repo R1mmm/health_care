@@ -173,7 +173,8 @@ function GroupMain() {
         <ShowingButton />
         <Link to={`/exerciseRecording`}
             state={{
-                groupId : location.state.groupList.groupId
+                groupId : location.state.groupList.groupId,
+                groupName : location.state.groupList.groupName
                 }}>
         <input type='button' value='운동 기록하기' className='recordingButton'/>
         </Link>
