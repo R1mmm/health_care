@@ -13,7 +13,7 @@ function GroupRender({groupList}) {
 
     const[sortOption,setSortOptions]=useState(0);
     const [isSorting, setisSorting] = useState(false);
-    const[renderBox,setrenderBox]=useState("<div className={styles.GroupListDiv}>{groupList.map((routin)=>(<GroupBox groupList={routin}/>))}</div>")
+    const[renderBox,setrenderBox]=useState(groupList)
 
     const onSortOptionChange = (e) => {
         setSortOptions(e.currentTarget.value);
@@ -25,10 +25,24 @@ function GroupRender({groupList}) {
         if (isSorting) {
           if (sortOption==0) {
               console.log(sortOption)
+              setrenderBox(groupList);
               setisSorting(false);
           }
           else{
             console.log(sortOption)
+            const renderGroup=[...renderBox]
+            renderGroup.sort(function(a,b){
+                let x = a.groupName.toLowerCase();
+                let y = b.groupName.toLowerCase();
+                if(x<y){
+                    return -1;
+                }
+                if(x>y){
+                    return 1;
+                }
+                return 0
+            });
+            setrenderBox(renderGroup);
             setisSorting(false);
         }
       }
@@ -37,23 +51,23 @@ function GroupRender({groupList}) {
 
 
 
-      function GroupBox({ groupList }) {
-        return (
-            //Link를 통해 props 데이터 전달
-            <Link to={`/groupMain/${groupList.groupId}`}
-            state={{
-                groupList : groupList
-                }}>
-            <div className={styles.GroupListBox}>
-              <p className={styles.Mrate}>출석률     {groupList.rate}</p>
-              <p className={styles.MgroupName}>{groupList.groupName}</p>
-              <p className={styles.Mmembers}>{groupList.member}/20명</p>
-              <p className={styles.MvideoName}>{groupList.VideoName}</p>
-              <p className={styles.Mmemo}>{groupList.tag}</p>
-            </div>
-            </Link>
-        )
-      }
+    function GroupBox({ groupList }) {
+    return (
+        //Link를 통해 props 데이터 전달
+        <Link to={`/groupMain/${groupList.groupId}`}
+        state={{
+            groupList : groupList
+            }}>
+        <div className={styles.GroupListBox}>
+            <p className={styles.Mrate}>출석률     {groupList.rate}</p>
+            <p className={styles.MgroupName}>{groupList.groupName}</p>
+            <p className={styles.Mmembers}>{groupList.member}/20명</p>
+            <p className={styles.MvideoName}>{groupList.VideoName}</p>
+            <p className={styles.Mmemo}>{groupList.tag}</p>
+        </div>
+        </Link>
+    )
+    }
 
     return(
         <>
@@ -66,7 +80,7 @@ function GroupRender({groupList}) {
                 <div className={styles.NoGroup}>해당하는 그룹이 없습니다</div>
             ):null}
             <div className={styles.GroupListDiv}>
-                {groupList.map((routin)=>(<GroupBox groupList={routin}/>))}
+                {renderBox.map((renderBox)=>(<GroupBox groupList={renderBox}/>))}
             </div>
         </>
     )
